@@ -9,6 +9,9 @@ import {environment} from '../environments/environment';
 import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 import {TopBarModule} from './shared/modules/topBar/top-bar.module';
+import {PersistenceService} from './shared/services/persistence.service';
+import {AuthInterceptor} from './shared/services/auth-interceptor.service';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,7 +28,14 @@ import {TopBarModule} from './shared/modules/topBar/top-bar.module';
     }),
     EffectsModule.forRoot([])
   ],
-  providers: [],
+  providers: [
+    PersistenceService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
