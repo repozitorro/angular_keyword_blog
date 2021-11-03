@@ -3,12 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
-    "build": "ng build",
+    "start": "ng serve",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "heroku-postbuild": "ng build --prod"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +23,7 @@
     "@ngrx/router-store": "^12.5.1",
     "@ngrx/store": "^12.5.0",
     "@ngrx/store-devtools": "^12.5.0",
+    "compression": "^1.7.4",
     "express": "^4.17.1",
     "query-string": "^7.0.1",
     "rxjs": "^6.5.5",
