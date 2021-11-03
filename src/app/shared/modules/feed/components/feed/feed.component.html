@@ -33,6 +33,7 @@
     </a>
   </div>
   <app-pagination
+    *ngIf="(feed$ | async).articles?.length === 10"
     [total]="200"
     [limit]="limit"
     [url]="baseUrl"
