@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {PopularTagType} from '../../../../types/popular-tag.type';
+import {PopularTagType} from '../../../../types/popularTag.type';
 
 @Component({
   selector: 'app-tag-list',
