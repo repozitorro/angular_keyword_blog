@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://conduit-api-realworld.herokuapp.com/api'
+  apiUrl: 'https://conduit-api-realworld.herokuapp.com/api',
+  limit: 10
 };
 
 /*

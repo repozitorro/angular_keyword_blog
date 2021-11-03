@@ -1,0 +1,14 @@
+.article-item {
+  display: flex;
+
+  .article-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+  }
+
+  .article-info {
+    display: flex;
+    flex-direction: column;
+  }
+}
