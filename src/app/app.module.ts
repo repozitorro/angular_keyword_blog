@@ -16,6 +16,7 @@ import {GlobalFeedModule} from './global-feed/global-feed.module';
 import {routerReducer, StoreRouterConnectingModule} from '@ngrx/router-store';
 import {YourFeedModule} from './your-feed/your-feed.module';
 import {TagFeedModule} from './tag-feed/tag-feed.module';
+import {ArticleModule} from './article/article.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,6 +28,7 @@ import {TagFeedModule} from './tag-feed/tag-feed.module';
     GlobalFeedModule,
     YourFeedModule,
     TagFeedModule,
+    ArticleModule,
     StoreModule.forRoot({router: routerReducer}),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
