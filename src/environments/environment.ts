@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://conduit-api-realworld.herokuapp.com/api',
+  apiUrl: 'https://nestjs-it-blog.herokuapp.com',
   limit: 10
 };
 
