@@ -13,7 +13,7 @@
             src="https://studzona.com/img/user-menu.png"
             class="article-img"
             alt="avatar"
-          />
+          >
         </a>
         <div class="article-info">
           <a [routerLink]="['/profiles', article.author.username]">
@@ -34,7 +34,7 @@
   </div>
   <app-pagination
     *ngIf="(feed$ | async).articles?.length === 10"
-    [total]="200"
+    [total]="(feed$ | async).articlesCount"
     [limit]="limit"
     [url]="baseUrl"
     [currentPage]="currentPage"
