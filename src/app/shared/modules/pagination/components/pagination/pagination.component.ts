@@ -27,7 +27,6 @@ export class PaginationComponent implements OnInit {
   initializePagination() {
     this.pageCount = Math.ceil(this.totalProps / this.limitProps);
     this.pages = this.utilsService.range(1, this.pageCount);
-    console.log(this.pageCount);
   }
 
 }
