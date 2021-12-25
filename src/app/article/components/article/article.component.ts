@@ -69,7 +69,7 @@ export class ArticleComponent implements OnInit, OnDestroy {
           if (!article || !currentUser) {
             return false;
           }
-          return currentUser.username === article.author.username;
+          return currentUser.id === article.author.id;
         }
       )
     );
