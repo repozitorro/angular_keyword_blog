@@ -1,6 +1,7 @@
 import {ProfileInterface} from './profile.interface';
 
 export interface ArticleInterface {
+  id: number;
   author: ProfileInterface;
   body: string;
   createdAt: string;
