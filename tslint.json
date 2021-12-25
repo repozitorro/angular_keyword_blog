@@ -93,7 +93,7 @@
     "no-inputs-metadata-property": true,
     "no-output-native": true,
     "no-output-on-prefix": true,
-    "no-output-rename": true,
+    "no-output-rename": false,
     "semicolon": {
       "options": [
         "always"
