@@ -11,23 +11,25 @@ import {ErrorMessageModule} from '../error-message/error-message.module';
 import {LoadingModule} from '../loading/loading.module';
 import {PaginationModule} from '../pagination/pagination.module';
 import {TagListModule} from '../tag-list/tag-list.module';
+import {AddToFavoritesModule} from '../add-to-favorites/add-to-favorites.module';
 
 @NgModule({
   declarations: [
     FeedComponent
   ],
-  imports: [
-    CommonModule,
-    EffectsModule.forFeature([
-      GetFeedEffect
-    ]),
-    StoreModule.forFeature('feed', reducers),
-    RouterModule,
-    ErrorMessageModule,
-    LoadingModule,
-    PaginationModule,
-    TagListModule
-  ],
+    imports: [
+        CommonModule,
+        EffectsModule.forFeature([
+            GetFeedEffect
+        ]),
+        StoreModule.forFeature('feed', reducers),
+        RouterModule,
+        ErrorMessageModule,
+        LoadingModule,
+        PaginationModule,
+        TagListModule,
+        AddToFavoritesModule
+    ],
   exports: [FeedComponent],
   providers: [FeedService]
 })

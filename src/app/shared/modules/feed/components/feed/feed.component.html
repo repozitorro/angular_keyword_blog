@@ -10,7 +10,7 @@
       <div class="article-item">
         <a [routerLink]="['/profiles', article.author.username]">
           <img
-            src="https://studzona.com/img/user-menu.png"
+            [src]="article.author.image ? article.author.image : 'https://studzona.com/img/user-menu.png'"
             class="article-img"
             alt="avatar"
           >
@@ -23,7 +23,12 @@
         </div>
       </div>
       <div class="pull-xs-right">
-        ADD TO FAVORITES
+        <app-add-to-favorites
+          [articleSlug]="article.slug"
+          [favoritesCount]="article.favoritesCount"
+          [isFavorited]="article.favorited"
+        >
+        </app-add-to-favorites>
       </div>
     </div>
     <a [routerLink]="['/articles', article.slug]" class="preview-link">
