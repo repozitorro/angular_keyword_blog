@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://nestjs-it-blog.herokuapp.com',
+  apiUrl: 'https://nestjs-keyword-blog.herokuapp.com',
   limit: 10
 };
